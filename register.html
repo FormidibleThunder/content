@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,15 +38,14 @@
         <p>A new recipe
             will be posted every week!</p>
     </div>
-    <form id="registrationForm" aria-label="Newsletter Signup Form">
-
-        <!-- THIS SECTION MAKES SURE A VALID FIRST NAME IS ENTERED -->
+    <form id="registrationForm" aria-label="Newsletter Signup Form" novalidate>
         <label for="firstName">First Name:</label>
         <div class="input-icon">
             <i class="fa fa-user"></i>
             <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="firstName"
                 id="firstName" placeholder="Enter letters only" required>
         </div>
+        <span class="error-message" id="firstNameError"></span>
 
         <label for="lastName">Last Name:</label>
         <div class="input-icon">
@@ -55,13 +53,14 @@
             <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="lastName"
                 id="lastName" placeholder="Enter letters only" required>
         </div>
+        <span class="error-message" id="lastNameError"></span>
 
         <label for="emailAddress">Email address:</label>
         <div class="input-icon">
             <i class="fa fa-envelope"></i>
-            <input type="email" id="emailAddress" name="emailAddress" placeholder="Please enter a valid email"
-                title="Please enter a valid email address (e.g., example@domain.com)" required>
+            <input type="email" id="emailAddress" name="emailAddress" placeholder="example@domain.com" required />
         </div>
+        <span class="error-message" id="emailError"></span>
 
         <label for="mobileNumber">Mobile number:</label>
         <div class="input-icon">
@@ -70,6 +69,7 @@
                 placeholder="Enter 10-digit mobile number"
                 title="Please enter a valid 10-digit mobile number starting with a non-zero digit" required>
         </div>
+        <span class="error-message" id="mobileError"></span>
 
         <label for="password">Password:</label>
         <div class="input-icon">
@@ -77,16 +77,16 @@
             <input type="password" id="password" name="password" minlength="6" maxlength="12"
                 placeholder="Password (6-12 characters)" required>
         </div>
+        <span class="error-message" id="passwordError"></span>
 
         <label for="confirmPassword">Confirm password:</label>
         <div class="input-icon">
             <i class="fa fa-lock"></i>
             <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
         </div>
-        <div class="input-icon">
-            <input type="submit" id="submit" name="submit" value="Submit">
-        </div>
+        <span class="error-message" id="confirmPasswordError"></span>
 
+        <input type="submit" id="submit" name="submit" value="Submit">
     </form>
 
     <script src="script.js"></script> <!-- Linking the script.js file -->
@@ -95,7 +95,63 @@
         Shamal Madawana Liyana Hettiarachchige<br>
         Assessment 3 Due Date: 29th May 2025
     </footer>
-
 </body>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        // Clear previous error messages
+        document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+        // First Name
+        const firstName = document.getElementById('firstName').value.trim();
+        if (!/^[A-Z][a-zA-Z]+$/.test(firstName)) {
+            document.getElementById('firstNameError').textContent = "Please enter only letters and start with a capital letter.";
+            valid = false;
+        }
+
+        // Last Name
+        const lastName = document.getElementById('lastName').value.trim();
+        if (!/^[A-Z][a-zA-Z]+$/.test(lastName)) {
+            document.getElementById('lastNameError').textContent = "Please enter only letters and start with a capital letter.";
+            valid = false;
+        }
+
+        // Email
+        const email = document.getElementById('emailAddress').value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById('emailError').textContent = "Please enter a valid email address.";
+            valid = false;
+        }
+
+        // Mobile
+        const mobile = document.getElementById('mobileNumber').value.trim();
+        if (!/^[1-9][0-9]{9}$/.test(mobile)) {
+            document.getElementById('mobileError').textContent = "Enter a valid 10-digit mobile number starting with a non-zero digit.";
+            valid = false;
+        }
+
+        // Password
+        const password = document.getElementById('password').value;
+        if (password.length < 6 || password.length > 12) {
+            document.getElementById('passwordError').textContent = "Password must be 6-12 characters long.";
+            valid = false;
+        }
+
+        // Confirm Password
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        if (password !== confirmPassword) {
+            document.getElementById('confirmPasswordError').textContent = "Passwords do not match.";
+            valid = false;
+        }
+
+        if (valid) {
+            alert("Registration successful!");
+            document.getElementById('registrationForm').reset();
+        }
+    });
+</script>
 
 </html>
