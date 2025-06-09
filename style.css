@@ -167,10 +167,10 @@ h1 {
 }
 
 .banner-text p {
-    font-size: 1.2em;
-    margin-top: 0;
-    text-align: center;
-    color: #ffcc00;
+    font-size: 1.5vw;
+    margin: 0 auto;
+    max-width: 90vw;
+    padding: 2vw 4vw;
 }
 
 .banner-text .banner-desc {
@@ -729,7 +729,7 @@ form {
 /* Checked state */
 .step-checkbox:checked+label::before {
     border-color: #4caf50;
-    background: #fde06c;
+    background: #ffd700;
 }
 
 .step-checkbox:checked+label::after {
