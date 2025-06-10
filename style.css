@@ -1,8 +1,17 @@
 header {
-    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 0rem;
+    gap: 2rem;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 2rem;
 }
 
 body {
@@ -10,6 +19,9 @@ body {
     padding: 0px;
     background-color: #81171b;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
 }
 
 .content {
@@ -63,7 +75,8 @@ body {
     font-size: 1.5em;
     font-weight: 700;
     display: block;
-    padding: 18px 0 18px 16px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    padding: 25px 0 25px 16px;
     border-radius: 6px;
     transition: background 0.2s, color 0.2s;
     min-height: 56px;
@@ -88,7 +101,7 @@ body {
 
 .recipe-section>p,
 .recipe-section>br+p {
-    font-size: 20px !important;
+    font-size: 24px !important;
 }
 
 h1,
@@ -367,6 +380,30 @@ ul {
     text-align: left;
 }
 
+ol.step-list>li,
+ul.step-list>li {
+    margin-bottom: 28px;
+    /* or the spacing you want */
+}
+
+ol.step-list>li:last-child,
+ul.step-list>li:last-child {
+    margin-bottom: 0;
+}
+
+/* Add spacing between Egg Hopper recipe steps */
+.hopper-method li {
+    margin-bottom: 24px;
+    /* Adjust value as you like */
+}
+
+.hopper-method li:last-child {
+    margin-bottom: 0;
+}
+
+#hopperIngredients li {
+    margin-bottom: 24px;
+}
 
 
 /* END OF ORDERED AND UNORDERED LIST STYLING */
@@ -445,6 +482,7 @@ ul {
 }
 
 .navbar ul {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -455,7 +493,7 @@ ul {
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 15px;
+    padding: 18px;
     display: block;
     text-align: center;
     transition: all 0.3s ease;
@@ -466,19 +504,21 @@ ul {
 }
 
 .navbar li {
-    float: left;
-
+    margin-right: 1.5rem;
+    color: white;
 }
 
 .navbar a.active {
-    background-color: #66283c;
+    background-color: #5c2a37;
     color: white;
-    border-bottom: 3px solid #ffe066;
+    border-bottom: 3px solid #ffc966;
+    width: 60px;
 }
 
 .navbar a:hover:not(.active) {
     background-color: #131313;
     border-bottom: 3px solid #4CAF50;
+    width: 60px;
 }
 
 /* END OF NAVBAR STYLE */
@@ -837,4 +877,10 @@ form {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+}
+
+.recipe-section h1 {
+    color: yellow;
+    font-size: 2.5em;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif
 }

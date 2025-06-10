@@ -10,18 +10,22 @@
 </head>
 
 <body>
-    <header role="banner" aria-label="Site Header">The Wonders of Sri Lankan Food</header>
 
     <!-- The navigation bar where all the links to the other webpages appear -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <ul role="menubar" aria-label="Main menu">
-            <li role="none"><a href="index.html" role="menuitem" aria-label="Home page">Home</a></li>
-            <li role="none"><a href="recipes.html" class="active" role="menuitem" aria-current="page"
-                    aria-label="Recipes page">Recipes</a></li>
-            <li role="none"><a href="register.html" role="menuitem" aria-label="Sign up for newsletter">Newsletter</a>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <span class="site-title" role="banner" aria-label="Site Header">The Wonders of Sri Lankan Food</span>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <ul role="menubar" aria-label="Main menu">
+                <li role="none"><a href="index.html" role="menuitem" aria-current="page" aria-label="Home page">Home</a>
+                </li>
+                <li role="none"><a href="recipes.html" class="active" role="menuitem"
+                        aria-label="View Sri Lankan recipes">Recipes</a>
+                </li>
+                <li role="none"><a href="register.html" role="menuitem"
+                        aria-label="Sign up for newsletter">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Navgation bar element ends here -->
 
 
@@ -85,7 +89,7 @@
                     you're ready to assemble the final dish. This makes the cooking process much more manageable!</p>
             </div>
             <div id="Lamprais" class="recipe-section" aria-labelledby="Lamprais-heading">
-                <h1 id="Lamprais-heading">01. Lamprais</h1>
+                <h1>01. Lamprais</h1>
                 <h2 class="recipe-aligned-content">Banana Leaf Bundles of Joy: Unwrapping Lamprais</h2>
                 <p style="font-size: 20px;" class="recipe-aligned-content">The food scene of Sri Lanka is quite unique
                     because their culture has been
@@ -694,7 +698,7 @@
             </table>
         </div>
         <div id="kottu" class="recipe-section" aria-labelledby="kottu-heading">
-            <h1 id="kottu-heading">02. Kottu</h1>
+            <h1>02. Kottu</h1>
             <h2 class="recipe-aligned-content">Kottu: When Leftovers Become a Symphony of Flavour</h2>
             <p class="recipe-aligned-content">Kottu originated in the Tamil regions of Sri Lanka in the 1970s, likely in
                 Trincomalee or
@@ -713,14 +717,15 @@
                 a meal that is both satisfying and full of character. It’s a dish that brings people together, whether
                 enjoyed at a bustling street stall or made at home with family and friends.</p><br>
 
-            <img id="kottu" src="./images/kottu.jpg" class="recipe-aligned-content">
+            <img id="kottu" src="./images/kottu.jpg" class="recipe-aligned-content"
+                alt="Sri Lankan street food: Cheese kottu">
 
             <!-- A video of a easy cheese kottu you can make at home -->
             <div class="video-center">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEBPoZ1dmVQ?si=5T5K-588e2rqFP2i"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen muted></iframe>
             </div>
             <!-- Ending of recipe video -->
             <p class="recipe-aligned-content">The colour and vibrancy from the vegetables featured in the dish also make
@@ -795,7 +800,7 @@
         <!-- Egg Hoppers Recipe -->
 
         <div id="hoppers" class="recipe-section" aria-labelledby="egg-hoppers-heading">
-            <h1 id="egg-hoppers-heading">03. Egg Hoppers</h1>
+            <h1>03. Egg Hoppers</h1>
             <h2 class="recipe-aligned-content">Hoppers are Egglicious</h2>
 
             <img id="Egg_Hop" src="./images/Eggy_Hoppers.jpg"
@@ -824,46 +829,50 @@
                 </tr>
                 <tr>
                     <td>
-                        <ul id="hopperIngredients">
-                            <li>1 teaspoon dried yeast</li><br>
-                            <li>2 teaspoons sugar</li><br>
-                            <li>1/2 cup lukewarm water</li><br>
-                            <li>Water from the coconut or plain water</li><br>
-                            <li>Approx. 2 1/2 cups thick coconut milk</li><br>
-                        </ul>
+                        <div class="ingredients">
+                            <ul id="hopperIngredients">
+                                <li>1 teaspoon dried yeast</li>
+                                <li>2 teaspoons sugar</li>
+                                <li>1/2 cup lukewarm water</li>
+                                <li>Water from the coconut or plain water</li>
+                                <li>Approx. 2 1/2 cups thick coconut milk</li>
+                            </ul>
+                        </div>
                     </td>
                     <td>
-                        <ol id="hopperinstruct">
-                            <li>Mix yeast and sugar in lukewarm water and leave aside 5 minutes or until it starts to
-                                froth.
-                                Put
-                                the rice flour into a large bowl. Make a well and add the yeast mixture and sufficient
-                                cold
-                                water or coconut water to make a soft dough. Cover and leave aside 3 - 4 hours to rise.
-                            </li>
-                            <br>
-                            <li>When the
-                                dough doubles in size and 3 hours before required, add the thick coconut milk to make a
+                        <ol class="hopper-method">
+                            <li>Mix yeast and sugar in lukewarm water and leave aside 5 minutes or until it starts
+                                to
+                                froth. Put the rice flour into a large bowl. Make a well and add the yeast mixture
+                                and sufficient
+                                cold water or coconut water to make a soft dough. Cover and leave aside 3 - 4 hours
+                                to rise.</li>
+                            <li>When the dough doubles in size and 3 hours before required, add the thick coconut
+                                milk to make a
                                 thick
                                 yet pourable batter. Add salt to taste and leave aside. After 3 hours the batter is
                                 ready to use. It may be necessary to add a little more milk to get the correct
-                                consistency
-                                and
-                                with a little practice you will achieve perfection.</li><br>
-                            <li>To make hoppers, wipe the pan with a piece of cloth dipped in oil. When the pan is hot
+                                consistency </li>
+                            <li>To make hoppers, wipe the pan with a piece of cloth dipped in oil. When the pan is
+                                hot
                                 pour
                                 a
                                 ladle of the batter. Swirl the pan around so that the batter covers the sides, be
                                 careful
                                 not to
                                 spill the batter. Cover and cook on a low
-                                heat until the top edge begins to turn golden. Remove hopper with a metal spatula. Wipe
+                                heat until the top edge begins to turn golden. Remove hopper with a metal spatula.
+                                Wipe
                                 pan
-                                again with the oiled cloth and repeat.</li><br>
-                            <li>For egg hoppers, pour a ladle of batter into the pan. Then break an egg into the centre.
+                                again with the oiled cloth and repeat. To get the correct bowl shape it will get a
+                                bit of skill, however, with a litte practice you will reach
+                                perfection </li>
+                            <li>For egg hoppers, pour a ladle of batter into the pan. Then break an egg into the
+                                centre.
                                 Cover
-                                and cook on a very low heat until the egg is just done.</li><br>
-                            <li>Serve immediately with your choice of sambols, curries or chutneys for a traditional Sri
+                                and cook on a very low heat until the egg is just done.</li>
+                            <li>Serve immediately with your choice of sambols, curries or chutneys for a traditional
+                                Sri
                                 Lankan
                                 breakfast experience.</li>
                         </ol>
@@ -877,11 +886,13 @@
         <!-- Egg Hoppers Recipe Ends -->
 
 
-        <hr>
+        <!-- Start of footer-->
+
         <footer role="contentinfo" aria-label="Page Footer" style="color: white; text-align: center;">
             Shamal Madawala Liyana Hettiarachchige<br>
             Assessment 3 Due Date: 29th May 2025
         </footer>
+
         <!-- End of footer -->
 
 
