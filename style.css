@@ -1,17 +1,25 @@
 header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
     display: flex;
     align-items: center;
     background-color: #000000;
     color: white;
     text-align: left;
-    padding: 0rem;
+    padding: 0 2.5rem;
     gap: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+
 }
 
 .site-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    margin-left: 2rem;
+    margin-left: 2.5rem;
 }
 
 body {
@@ -94,19 +102,10 @@ body {
 
 /* END OF THE SIDEBAR STYLING */
 
-.recipe-section {
-    min-height: 100vh;
-    padding: 20px 0;
-}
 
 .recipe-section>p,
 .recipe-section>br+p {
     font-size: 24px !important;
-}
-
-h1,
-h2 {
-    color: #333;
 }
 
 main {
@@ -234,7 +233,6 @@ h1 {
     font-size: 1.4rem;
     color: hsl(0, 0%, 100%);
     text-align: justify;
-    /* Add any other custom styles for this page */
 }
 
 /* END OF HERO IMAGE STYLING */
@@ -269,6 +267,8 @@ h1 {
     font-size: 1.5em;
     color: #000000;
     text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
     height: 100px;
 }
 
@@ -296,6 +296,7 @@ h1 {
     /* Evenly distribute columns */
 }
 
+/* LAMPRAIS RECIPE TOOLTIP THAT READS CLICK ON A RECIPE NAME TO VIEW AND EXPAND DETAILS */
 .recipe-steps-table.condensed h6 {
     color: #fff;
     margin: 0;
@@ -303,6 +304,10 @@ h1 {
     width: 210px;
 }
 
+/* END OF TOOLTIP STYLING */
+
+
+/* STYLES THE TEXT INSIDE EACH RECIPE TABLE */
 .recipe-steps-table.condensed td {
     background: transparent;
     border: none;
@@ -314,36 +319,38 @@ h1 {
     /* Evenly distribute columns */
 }
 
+/* TEXT STYLING ENDS */
 
 
-/* This section styles the recipe steps table along with all of the child header and data */
-.recipe-header {
-    color: red;
-}
 
-.recipe-details {
-    background-color: rebeccapurple;
-}
-
+/* THIS SPECIFICALLY CONTROLS THE RECIPE NAME COLUMN, OR ON THE OTHER RECIPE TABLES THE INGREDIENTS COLUMN */
 .recipe-steps-table th:nth-child(1),
 .recipe-steps-table td:nth-child(1) {
     width: 34%;
     background-color: #005A5A;
 }
 
+/* COLUMN ONE STYLING ENDS */
+
+
+/* THIS SPECIFICALLY CONTROLS THE INGREDIENTS COLUMN ON THE LAMPRAIS RECIPE AND METHOD COLUMN ON THE KOTTU AND EGG HOPPERS RECIPE */
 .recipe-steps-table th:nth-child(2),
 .recipe-steps-table td:nth-child(2) {
     width: 30%;
     background-color: #D65c00;
 }
 
+/* COLUMN TWO STYLING ENDS */
+
+
+/* THIS SPECIFICALLY CONTROLS THE METHOD COLUMN ON THE LAMPRAIS RECIPE */
 .recipe-steps-table th:nth-child(3),
 .recipe-steps-table td:nth-child(3) {
     width: 50%;
     background-color: #8B2635;
 }
 
-/* END OF RECIPE STEPS TABLE STYLING */
+/* COLUMN THREE STYLING ENDS */
 
 
 /* Adjusts the styling of the recipe name listing for the lamprais section */
@@ -376,18 +383,23 @@ ol {
 
 }
 
-ul {
-    text-align: left;
-}
-
 ol.step-list>li,
-ul.step-list>li {
+ul.recipe-details>li {
     margin-bottom: 28px;
     /* or the spacing you want */
 }
 
 ol.step-list>li:last-child,
-ul.step-list>li:last-child {
+ul.recipe-details>li:last-child {
+    margin-bottom: 0;
+}
+
+.recipe-steps-table ul>li {
+    margin-bottom: 18px;
+    /* Or whatever matches the steps */
+}
+
+.recipe-steps-table ul>li:last-child {
     margin-bottom: 0;
 }
 
@@ -476,7 +488,7 @@ ul.step-list>li:last-child {
 /* THIS SECTION CONTROLS THE APPEARANCE OF THE NAVBAR */
 
 .navbar {
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 1000;
 }
@@ -486,17 +498,19 @@ ul.step-list>li:last-child {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #000000;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 18px;
+    padding: 15px 32px;
     display: block;
     text-align: center;
     transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    font-size: 1.1em;
+    box-sizing: border-box;
 }
 
 .navbar a:hover {
@@ -505,20 +519,17 @@ ul.step-list>li:last-child {
 
 .navbar li {
     margin-right: 1.5rem;
-    color: white;
 }
 
 .navbar a.active {
     background-color: #5c2a37;
     color: white;
     border-bottom: 3px solid #ffc966;
-    width: 60px;
 }
 
 .navbar a:hover:not(.active) {
     background-color: #131313;
     border-bottom: 3px solid #4CAF50;
-    width: 60px;
 }
 
 /* END OF NAVBAR STYLE */
@@ -600,17 +611,6 @@ ul.step-list>li:last-child {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-#Lampraishead h1,
-h2 {
-    color: orangered;
-}
-
-#lampraishead h2 {
-    color: rgb(255, 204, 0);
-}
-
-
 /* A BRITANNICA LINK TO DUTCH COLONISATION */
 
 .history-link {
@@ -627,11 +627,15 @@ form {
     max-width: 400px;
     margin: 20px auto;
     padding: 10px;
-    background-color: #c47104;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     text-align: center;
+    background: #d17b30;
+    padding: 1em;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .error-message {
@@ -712,14 +716,6 @@ input {
     background-color: #256029;
 }
 
-form {
-    background: #d17b30;
-    padding: 1em;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
 .recipe-btn {
     background-color: #4caf50;
     color: #fff;
@@ -744,18 +740,6 @@ form {
     box-shadow: 0 0 10px#ffd700;
 }
 
-.status-indicator {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    font-size: 1.2em;
-    color: #333;
-    background: #9366d3;
-    padding: 4px 14px;
-    border-radius: 20px;
-    width: fit-content;
-    box-shadow: 0 1px 8px #ffd70044;
-}
 
 /* --- CUSTOM CHECKBOX STYLING START --- */
 .step-checkbox {
@@ -879,8 +863,18 @@ form {
     box-sizing: border-box;
 }
 
+
+/* THIS SECTION CONTROLS THE RECIPE HEADERS AND SUBHEADINGS */
 .recipe-section h1 {
     color: yellow;
     font-size: 2.5em;
+    font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif
 }
+
+.recipe-section h2 {
+    color: orangered;
+    font-weight: bold;
+}
+
+/* END OF RECIPE HEADING STYLING */
