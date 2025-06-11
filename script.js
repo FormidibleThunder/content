@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('registrationForm');
-    let messageParagraph = document.getElementById('formMessage');
-    if (!messageParagraph) {
-        messageParagraph = document.createElement('p');
-        messageParagraph.id = 'formMessage';
-        form.after(messageParagraph);
-    }
+    const messageParagraph = document.getElementById('formMessage');
+    const passwordMismatchMsg = document.getElementById('passwordMismatchMsg');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         let valid = true;
 
-        // Clear previous error messages and reset styles
+        // Clear previous error messages and feedback
         document.querySelectorAll('.error-message').forEach(el => {
             el.textContent = '';
             el.style.color = '';
@@ -20,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
         messageParagraph.className = '';
         messageParagraph.removeAttribute('role');
         messageParagraph.style.display = 'none';
+        passwordMismatchMsg.style.display = 'none';
+        passwordMismatchMsg.textContent = '';
 
-        // Get field values
+        // Get values
         const firstName = document.getElementById('firstName').value.trim();
         const lastName = document.getElementById('lastName').value.trim();
         const email = document.getElementById('emailAddress').value.trim();
@@ -39,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function () {
             !confirmPassword
         ) {
             messageParagraph.textContent = "You cannot submit an empty form, please fill out each field and try again.";
-            messageParagraph.classList.add('error');
+            messageParagraph.className = 'error';
             messageParagraph.setAttribute('role', 'alert');
             messageParagraph.style.display = 'block';
             return;
         }
 
-        // First Name validation
+        // First Name
         if (!firstName) {
             showError('firstNameError', "First name is required.");
             valid = false;
@@ -54,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             valid = false;
         }
 
-        // Last Name validation
+        // Last Name
         if (!lastName) {
             showError('lastNameError', "Last name is required.");
             valid = false;
@@ -63,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             valid = false;
         }
 
-        // Email validation
+        // Email
         if (!email) {
             showError('emailError', "Email address is required.");
             valid = false;
@@ -72,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
             valid = false;
         }
 
-        // Mobile validation
+        // Mobile
         if (!mobile) {
             showError('mobileError', "Mobile number is required.");
             valid = false;
@@ -81,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             valid = false;
         }
 
-        // Password validation
+        // Password
         if (!password) {
             showError('passwordError', "Password is required.");
             valid = false;
@@ -90,18 +88,21 @@ document.addEventListener('DOMContentLoaded', function () {
             valid = false;
         }
 
-        // Confirm Password validation
+        // Confirm Password logic:
         if (!confirmPassword) {
             showError('confirmPasswordError', "Please confirm your password.");
             valid = false;
         } else if (password !== confirmPassword) {
-            showError('confirmPasswordError', "Passwords do not match.");
+            showError('confirmPasswordError', "");
+            // Show side pop-up error instead of field error!
+            passwordMismatchMsg.textContent = "The passwords do not match. Please enter the same password and try again.";
+            passwordMismatchMsg.style.display = "block";
             valid = false;
         }
 
-        // Display results
+        // Display result
         if (valid) {
-            messageParagraph.classList.add('success');
+            messageParagraph.className = 'success';
             messageParagraph.innerHTML = `
                 Registration successful!<br>
                 <strong>First Name:</strong> ${escapeHTML(firstName)} <br>
@@ -110,16 +111,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 <strong>Mobile:</strong> ${escapeHTML(mobile)}
             `;
             messageParagraph.style.display = 'block';
+            passwordMismatchMsg.style.display = 'none';
             form.reset();
         } else {
-            messageParagraph.classList.add('error');
-            messageParagraph.setAttribute('role', 'alert');
-            messageParagraph.textContent = "Please fix the errors above and try again.";
-            messageParagraph.style.display = 'block';
+            if (!passwordMismatchMsg.textContent) {
+                messageParagraph.className = 'error';
+                messageParagraph.setAttribute('role', 'alert');
+                messageParagraph.textContent = "Please fix the errors above and try again.";
+                messageParagraph.style.display = 'block';
+            }
         }
     });
 
-    // Helper: Show error message in red
+    // Helper for error output
     function showError(elementId, message) {
         const el = document.getElementById(elementId);
         if (el) {
@@ -127,8 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
             el.style.color = "#b30000";
         }
     }
-
-    // Helper: Escape HTML for form values
+    // Helper for escaping
     function escapeHTML(str) {
         return str.replace(/[&<>"']/g, function (m) {
             return ({

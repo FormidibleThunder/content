@@ -41,70 +41,80 @@
         </div>
     </div>
 
-    <div class="signUptext">
-
+    <div class="newsletter-section">
         <p>When you signup to our newsletter, it lets us know that you support this project. This allows us to keep this
             website going!</p> <br><br>
         <p>So what other perks are there for registering? Get early access to our weekly recipes, and the ocassional
             giveaway here and there</p>
     </div>
-    <form id="registrationForm" aria-label="Newsletter Signup Form" novalidate>
-        <label for="firstName">First Name:</label>
-        <div class="input-icon">
-            <i class="fa fa-user"></i>
-            <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="firstName"
-                id="firstName" placeholder="Enter letters only" required>
+
+    <div class="form-row">
+        <div id="formMessageArea">
+            <p id="formMessage" aria-live="polite"></p>
+            <p id="passwordMismatchMsg" class="side-error-message" aria-live="polite"></p>
         </div>
-        <span class="error-message" id="firstNameError"></span>
 
-        <label for="lastName">Last Name:</label>
-        <div class="input-icon">
-            <i class="fa fa-user"></i>
-            <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="lastName"
-                id="lastName" placeholder="Enter letters only" required>
+        <div class="form-container">
+            <form id="registrationForm" aria-label="Newsletter Signup Form" novalidate>
+                <label for="firstName">First Name:</label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="firstName"
+                        id="firstName" placeholder="Enter letters only" required>
+                </div>
+                <span class="error-message" id="firstNameError"></span>
+
+                <label for="lastName">Last Name:</label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="lastName"
+                        id="lastName" placeholder="Enter letters only" required>
+                </div>
+                <span class="error-message" id="lastNameError"></span>
+
+                <label for="emailAddress">Email address:</label>
+                <div class="input-icon">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" id="emailAddress" name="emailAddress" placeholder="example@domain.com"
+                        required />
+                </div>
+                <span class="error-message" id="emailError"></span>
+
+                <label for="mobileNumber">Mobile number:</label>
+                <div class="input-icon">
+                    <i class="fa fa-phone"></i>
+                    <input pattern="[1-9]{1}[0-9]{9}" type="tel" id="mobileNumber" name="mobileNumber"
+                        placeholder="Enter 10-digit mobile number"
+                        title="Please enter a valid 10-digit mobile number starting with a non-zero digit" required>
+                </div>
+                <span class="error-message" id="mobileError"></span>
+
+                <label for="password">Password:</label>
+                <div class="input-icon">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" id="password" name="password" minlength="6" maxlength="12"
+                        placeholder="Password (6 - 12 characters)" required>
+                </div>
+                <span class="error-message" id="passwordError"></span>
+
+                <label for="confirmPassword">Confirm password:</label>
+                <div class="input-icon">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" maxlength="12"
+                        placeholder="Confirm password (6 - 12 characters)" required>
+                </div>
+                <p class="error-message" id="confirmPasswordError"></p>
+
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </form>
         </div>
-        <span class="error-message" id="lastNameError"></span>
-
-        <label for="emailAddress">Email address:</label>
-        <div class="input-icon">
-            <i class="fa fa-envelope"></i>
-            <input type="email" id="emailAddress" name="emailAddress" placeholder="example@domain.com" required />
-        </div>
-        <span class="error-message" id="emailError"></span>
-
-        <label for="mobileNumber">Mobile number:</label>
-        <div class="input-icon">
-            <i class="fa fa-phone"></i>
-            <input pattern="[1-9]{1}[0-9]{9}" type="tel" id="mobileNumber" name="mobileNumber"
-                placeholder="Enter 10-digit mobile number"
-                title="Please enter a valid 10-digit mobile number starting with a non-zero digit" required>
-        </div>
-        <span class="error-message" id="mobileError"></span>
-
-        <label for="password">Password:</label>
-        <div class="input-icon">
-            <i class="fa fa-lock"></i>
-            <input type="password" id="password" name="password" minlength="6" maxlength="12"
-                placeholder="Password (6-12 characters)" required>
-        </div>
-        <span class="error-message" id="passwordError"></span>
-
-        <label for="confirmPassword">Confirm password:</label>
-        <div class="input-icon">
-            <i class="fa fa-lock"></i>
-            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
-        </div>
-        <span class="error-message" id="confirmPasswordError"></span>
-
-        <input type="submit" id="submit" name="submit" value="Submit">
-    </form>
-
-    <script src="script.js"></script> <!-- Linking the script.js file -->
+    </div><br><br>
 
     <footer role="contentinfo" aria-label="Page Footer" style="color: white; text-align: center;">
         Shamal Madawala Liyana Hettiarachchige<br>
         Assessment 3 Due Date: 29th May 2025
     </footer>
+    <script src="script.js"></script> <!-- Linking the script.js file -->
 </body>
 
 </html>

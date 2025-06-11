@@ -636,39 +636,126 @@ form {
     margin: 0 auto;
 }
 
+.newsletter-section {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 27px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.5em;
+    margin-top: 2em;
+    width: 100%;
+    min-height: 340px;
+}
+
+@media (max-width: 900px) {
+    .form-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em
+    }
+
+    .form-container {
+        max-width: 600px;
+        min-width: 430px;
+    }
+
+    .input-icon input {
+        font-size: 1.12em;
+    }
+}
+
+
+#formMessageArea {
+    margin-bottom: 1.5em;
+    width: 90vw;
+    min-width: 0;
+    max-width: 600px;
+}
+}
+
+#formMessageArea {
+    min-width: 320px;
+    max-width: 420px;
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
 #formMessage {
-    margin: 1em 0;
+    width: 100%;
+    margin: 0 0 1.5em 0;
     padding: 1em 1.5em;
-    border-radius: 8px;
-    font-size: 1.1em;
+    border-radius: 10px;
+    font-size: 1.09em;
     font-weight: 500;
-    max-width: 500px;
-    min-width: 220px;
-    /* Default to hidden until set by JS */
     display: none;
-    margin: 2em 0 1em 0;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 #formMessage.error {
     display: block;
     background-color: #fff4f4;
-    /* very pale red */
-    color: #990000;
+    color: #a40000;
+    border: 2px solid #a40000;
+    font-weight: bold;
     background-color: #005A5A;
-    /* dark red, high contrast */
-    border: 2px solid #990000;
 }
 
 #formMessage.success {
     display: block;
-    background-color: #f4fff4;
-    /* very pale green */
-    color: #156600;
-    /* dark green, high contrast */
-    border: 2px solid #156600;
-    position: absolute;
-    top: 1200px;
-    left: 40px;
+    background-color: #f3fff3;
+    color: #155c00;
+    border: 2px solid #155c00;
+    font-weight: bold;
+}
+
+#passwordMismatchMsg {
+    background: #fff4f4;
+    color: #a40000;
+    border: 2px solid #a40000;
+    padding: 0.85em 1em;
+    border-radius: 9px;
+    margin: 0 0 1.2em 0;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 500;
+    display: none;
+    box-sizing: border-box;
+}
+
+
+.form-container {
+    background: #d17b30;
+    padding: 2.1em 2em 1.2em 2em;
+    border-radius: 14px;
+    max-width: 600px;
+    min-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
+    width: 100%;
+}
+
+@media (max-width: 520px) {
+    .form-container {
+        padding: 1em 0.5em;
+        min-width: 0;
+    }
+
+    #formMessageArea {
+        min-width: 0;
+    }
 }
 
 input {
@@ -700,7 +787,7 @@ input {
     padding-left: 40px;
     /* Make space for icon */
     height: 2.2em;
-    font-size: 1em;
+    font-size: 1.08em;
     width: 100%;
     height: 80%;
     box-sizing: border-box;
@@ -740,6 +827,15 @@ input {
 
 #registrationForm input[type="submit"]:hover {
     background-color: #256029;
+}
+
+.error-message {
+    color: #b30000 !important;
+    font-size: 0.97em;
+    font-weight: 500;
+    margin: 0.2em 0 0.4em 0.2em;
+    text-align: left;
+    min-height: 1.1em;
 }
 
 .recipe-btn {
