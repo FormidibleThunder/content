@@ -636,14 +636,39 @@ form {
     margin: 0 auto;
 }
 
-.error-message {
-    color: #b22222;
-    font-size: 0.93em;
-    text-align: left;
-    margin-bottom: 0.5em;
+#formMessage {
+    margin: 1em 0;
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+    max-width: 500px;
+    min-width: 220px;
+    /* Default to hidden until set by JS */
+    display: none;
+    margin: 2em 0 1em 0;
+}
+
+#formMessage.error {
     display: block;
-    min-height: 1.1em;
-    margin-left: 0.3em;
+    background-color: #fff4f4;
+    /* very pale red */
+    color: #990000;
+    background-color: #005A5A;
+    /* dark red, high contrast */
+    border: 2px solid #990000;
+}
+
+#formMessage.success {
+    display: block;
+    background-color: #f4fff4;
+    /* very pale green */
+    color: #156600;
+    /* dark green, high contrast */
+    border: 2px solid #156600;
+    position: absolute;
+    top: 1200px;
+    left: 40px;
 }
 
 input {
