@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linking the style.css file -->
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <!-- Linking the style.css file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css"
         integrity="sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -14,7 +15,7 @@
 <body>
     <header>
         <span class="site-title" role="banner" aria-label="Site Header">The Wonders of Sri Lankan Food</span>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" aria-label="Main navigation">
             <ul role="menubar" aria-label="Main menu">
                 <li role="none"><a href="index.html" role="menuitem" aria-current="page" aria-label="Home page">Home</a>
                 </li>
@@ -25,13 +26,14 @@
             </ul>
         </nav>
     </header>
-
     <div class="banner" role="banner" aria-label="Hero Banner">
         <img src="./images/srilankasunset.png" alt="A picture of a Sri Lankan Sunset">
         <div class="banner-overlay">
-            <div class="banner-text" aria-label="Banner Description">
+            <div class="banner-text">
                 <h1>The Wonders of Sri Lankan Food</h1>
-                <h2>Sign up for our newsletter.</h2><br><br>
+                <h2>Sign up for our newsletter.</h2>
+                <br>
+                <br>
                 <div class="banner-bottom-paragraphs">
                     <p class="hero-desc">
                         Scroll below to sign up for our newsletter and be notified about upcoming Sri Lankan recipe
@@ -40,81 +42,90 @@
             </div>
         </div>
     </div>
-
-    <div class="newsletter-section">
-        <p>When you signup to our newsletter, it lets us know that you support this project. This allows us to keep this
-            website going!</p> <br><br>
-        <p>So what other perks are there for registering? Get early access to our weekly recipes, and the ocassional
-            giveaway here and there</p>
+    <div class="newsletter-section" tabindex="0">
+        <p>
+            When you signup to our newsletter, it lets us know that you support this project. This allows us to keep
+            this website going!
+        </p>
+        <br>
+        <br>
+        <p>
+            So what other perks are there for registering? Get early access to our weekly recipes, and the ocassional
+            giveaway here and there
+        </p>
     </div>
-
-    <div class="form-row">
-        <div id="formMessageArea">
-            <p id="formMessage" aria-live="polite"></p>
-            <p id="passwordMismatchMsg" class="side-error-message" aria-live="polite"></p>
-        </div>
-
-        <div class="form-container">
-            <form id="registrationForm" aria-label="Newsletter Signup Form" novalidate>
-                <label for="firstName">First Name:</label>
-                <div class="input-icon">
-                    <i class="fa fa-user"></i>
-                    <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="firstName"
-                        id="firstName" placeholder="Enter letters only" required>
+    <div class="form-container">
+        <form id="registrationForm" aria-label="Newsletter Signup Form" novalidate>
+            <label for="firstName">First Name:</label>
+            <div class="input-icon">
+                <i class="fa fa-user"></i>
+                <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="firstName"
+                    id="firstName" placeholder="Enter your first name, starting with a capital letter" required>
+            </div>
+            <span class="error-message" id="firstNameError"></span>
+            <label for="lastName">Last Name:</label>
+            <div class="input-icon">
+                <i class="fa fa-user"></i>
+                <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="lastName"
+                    id="lastName" placeholder="Enter your last name, starting with a capital letter" required>
+            </div>
+            <span class="error-message" id="lastNameError"></span>
+            <label for="emailAddress">Email address:</label>
+            <div class="input-icon">
+                <i class="fa fa-envelope"></i>
+                <input type="email" id="emailAddress" name="emailAddress"
+                    placeholder="Enter your email: example@domain.com" required>
+            </div>
+            <span class="error-message" id="emailError"></span>
+            <label for="mobileNumber">Mobile number:</label>
+            <div class="input-icon">
+                <i class="fa fa-phone"></i>
+                <input pattern="[1-9]{1}[0-9]{9}" type="tel" id="mobileNumber" name="mobileNumber"
+                    placeholder="Enter a valid 10-digit mobile number"
+                    title="Please enter a valid 10-digit mobile number starting with a non-zero digit" required>
+            </div>
+            <span class="error-message" id="mobileError"></span>
+            <label for="password">Password:</label>
+            <div class="input-icon">
+                <i class="fa fa-lock"></i>
+                <input type="password" id="password" name="password" minlength="6" maxlength="12"
+                    placeholder="Enter a password (6 - 12 characters)" required>
+            </div>
+            <span class="error-message" id="passwordError"></span>
+            <label for="confirmPassword">Confirm password:</label>
+            <div class="input-icon">
+                <i class="fa fa-lock"></i>
+                <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" maxlength="12"
+                    placeholder="Confirm your password (6 - 12 characters)" required>
+            </div>
+            <p class="error-message" id="confirmPasswordError">
+            <p id="passwordMismatchMsg" class="side-error-message" aria-live="polite">
+            </p>
+            </p>
+            <input type="submit" id="submit" name="submit" value="Submit">
+            <div class="form-row">
+                <div id="formMessageArea">
+                    <p id="formMessage" aria-live="polite">
+                    </p>
                 </div>
-                <span class="error-message" id="firstNameError"></span>
+        </form>
+    </div>
+    </div>
+    <br>
+    <br>
 
-                <label for="lastName">Last Name:</label>
-                <div class="input-icon">
-                    <i class="fa fa-user"></i>
-                    <input pattern="^[A-Z][a-zA-Z]+$" title="Please enter only letters" type="text" name="lastName"
-                        id="lastName" placeholder="Enter letters only" required>
-                </div>
-                <span class="error-message" id="lastNameError"></span>
+    <!-- The footer begins here -->
 
-                <label for="emailAddress">Email address:</label>
-                <div class="input-icon">
-                    <i class="fa fa-envelope"></i>
-                    <input type="email" id="emailAddress" name="emailAddress" placeholder="example@domain.com"
-                        required />
-                </div>
-                <span class="error-message" id="emailError"></span>
 
-                <label for="mobileNumber">Mobile number:</label>
-                <div class="input-icon">
-                    <i class="fa fa-phone"></i>
-                    <input pattern="[1-9]{1}[0-9]{9}" type="tel" id="mobileNumber" name="mobileNumber"
-                        placeholder="Enter 10-digit mobile number"
-                        title="Please enter a valid 10-digit mobile number starting with a non-zero digit" required>
-                </div>
-                <span class="error-message" id="mobileError"></span>
-
-                <label for="password">Password:</label>
-                <div class="input-icon">
-                    <i class="fa fa-lock"></i>
-                    <input type="password" id="password" name="password" minlength="6" maxlength="12"
-                        placeholder="Password (6 - 12 characters)" required>
-                </div>
-                <span class="error-message" id="passwordError"></span>
-
-                <label for="confirmPassword">Confirm password:</label>
-                <div class="input-icon">
-                    <i class="fa fa-lock"></i>
-                    <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" maxlength="12"
-                        placeholder="Confirm password (6 - 12 characters)" required>
-                </div>
-                <p class="error-message" id="confirmPasswordError"></p>
-
-                <input type="submit" id="submit" name="submit" value="Submit">
-            </form>
-        </div>
-    </div><br><br>
-
-    <footer role="contentinfo" aria-label="Page Footer" style="color: white; text-align: center;">
-        Shamal Madawala Liyana Hettiarachchige<br>
-        Assessment 3 Due Date: 29th May 2025
+    <footer aria-label="Page Footer" style="color: white; text-align: center;">
+        <!-- Name: --> Shamal Madawala Liyana Hettiarachchige<br>
+        <!-- Due Date: --> Assessment 3 Due Date: 15th June 2025
     </footer>
-    <script src="script.js"></script> <!-- Linking the script.js file -->
+
+
+    <!-- End of footer -->
+
+    <script src="script.js"></script>
 </body>
 
 </html>

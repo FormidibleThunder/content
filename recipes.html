@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <script src="https://kit.fontawesome.com/4e94512a05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css"> <!-- Linking the style.css file -->
+    <link rel="stylesheet" href="stylesheet/style.css"> <!-- Linking the style.css file -->
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <!-- The navigation bar where all the links to the other webpages appear -->
     <header>
         <span class="site-title" role="banner" aria-label="Site Header">The Wonders of Sri Lankan Food</span>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <nav class="navbar" aria-label="Main navigation">
             <ul role="menubar" aria-label="Main menu">
                 <li role="none"><a href="index.html" role="menuitem" aria-current="page" aria-label="Home page">Home</a>
                 </li>
@@ -35,9 +35,9 @@
         <img src="./images/lk_spices.png"
             alt="Traditional Sri Lankan spice display with various ground spices and whole spices in dark wooden bowls">
         <div class="banner-overlay">
-            <div class="banner-text" aria-label="Banner Description">
-                <h1>The Wonders of Sri Lankan Food</h1>
-                <p class="banner-desc">
+            <div class="banner-text">
+                <h1 tabindex="0">The Wonders of Sri Lankan Food</h1>
+                <p class="banner-desc" tabindex="0">
                     As a proud Sri Lankan who moved to New Zealand at a very young age, my upbringing
                     pertains to a diverse fusion of cultures and interest in food. On one side we have the part of me
                     that honours my
@@ -50,7 +50,6 @@
                     been fortunate enough to be blessed with a brilliant chef as a mum. Check out the recipes I have
                     posted and I hope that you get inspired to try Sri Lankan food.
                 </p>
-
             </div>
         </div>
     </div>
@@ -82,27 +81,26 @@
 
             <!-- A note for Lamprais -->
 
-            <div class="lamprais-tip">
-                <h4>💡Time-Saving Tip</h4>
-                <p>Short on time? Many of the accompaniments for Lamprais can be prepared in advance! Make the seeni
-                    sambol, cutlets, eggplant moju, and blachan on different days and store them in the freezer until
-                    you're ready to assemble the final dish. This makes the cooking process much more manageable!</p>
-            </div>
+
             <div id="Lamprais" class="recipe-section" aria-labelledby="Lamprais-heading">
-                <h1>01. Lamprais</h1>
-                <h2 class="recipe-aligned-content">Banana Leaf Bundles of Joy: Unwrapping Lamprais</h2>
-                <p style="font-size: 20px;" class="recipe-aligned-content">The food scene of Sri Lanka is quite unique
+                <h1 tabindex="0">01. Lamprais</h1>
+                <h2 class="recipe-aligned-content" tabindex="0">Banana Leaf Bundles of Joy: Unwrapping Lamprais</h2>
+                <p style="font-size: 20px;" class="recipe-aligned-content" tabindex="0">The food scene of Sri Lanka is
+                    quite unique
                     because their culture has been
                     intertwined with
                     influences from Britain, Portugal,
                     Netherlands and even Malaysia. From 1658 until 1796 Sri Lanka was colonised <a
                         href="https://www.britannica.com/place/Sri-Lanka/Dutch-rule-in-Sri-Lanka-1658-1796"
-                        class="history-link" target="_blank" rel="noopener">by the Netherlands</a>,
+                        class="history-link" target="_blank" rel="noopener" tabindex="0"
+                        aria-label="a link that brings the user to the historical context of Sri Lanka being colonised by the Netherlands">by
+                        the Netherlands</a>,
                     during this period a ethnic
                     group known as the Dutch Burghers settled in Sri Lanka. The Dutch Burgher's were decendents from
                     Dutch, Portuguese and Sri Lankan ancestry who introduced a dish that would later become Lamprais.
                 </p><br>
-                <p class="recipe-aligned-content">The etymology of Lamprais can be traced back to the Dutch word
+                <p class="recipe-aligned-content" tabindex="0">The etymology of Lamprais can be traced back to the Dutch
+                    word
                     lomprijst or “parcel of food”. This is
                     essentially Sri Lankan comfort food at its best! Each time I eat Lamprais it reminds me of my
                     heritage and feeds my soul. The cool thing about Lamprais is that the dish is
@@ -114,21 +112,33 @@
                     banana leaves. The inclusion of the banana leaf wrapping imparts a unique aroma and taste to the
                     dish, adding a subtle earthy note.
                 </p><br>
+            </div>
 
+            <div class="lamprais-top-row">
                 <img id="riceDish" src="./images/Lamprais.jpg"
                     alt="Sri Lankan Lamprais served on a banana leaf: a mound of rice surrounded by mixed meat curry, fried egg, cutlet, seeni sambol, brinjal moju, and other traditional side dishes."
-                    class="recipe-aligned-content" width="800" height="500">
+                    class="recipe-aligned-content" width="800" height="500" tabindex="0">
+                <div class="lamprais-tip" tabindex="0">
+                    <h4>💡Time-Saving Tip</h4>
+                    <p>Short on time? Many of the accompaniments for Lamprais can be prepared in advance! Make the seeni
+                        sambol, cutlets, eggplant moju, and blachan on different days and store them in the freezer
+                        until
+                        you're ready to assemble the final dish. This makes the cooking process much more manageable!
+                    </p>
+                </div>
                 <br><br><br>
             </div>
 
 
             <!-- Summary of Lamprais -->
-            <table class="recipe-summary-table condensed" aria-label="Recipe Summary">
+            <table class="recipe-summary-table condensed" aria-label="Recipe Summary for Lamprais" tabindex="0">
                 <tr>
-                    <th scope="col">Category</th>
-                    <th scope="col">Servings</th>
-                    <th scope="col">Prep Time</th>
-                    <th scope="col">Cook Time</th>
+                    <th scope="col" aria-label="Category: Special Occasions." tabindex="0">Category</th>
+                    <th scope="col" aria-label="Serves 4 people." tabindex="0">Servings</th>
+                    <th scope="col" aria-label="Prep Time: 2 - 3 hours if making everything on the same day."
+                        tabindex="0">Prep Time
+                    </th>
+                    <th scope="col" aria-label="Cook Time: Also 2 - 3 hours." tabindex="0">Cook Time</th>
                 </tr>
                 <tr>
                     <td>Special Occassions</td>
@@ -137,13 +147,16 @@
                     <td>2 - 3 hours</td>
                 </tr>
             </table>
-            <table class="recipe-steps-table condensed" aria-label="Recipe Details">
+            <table class="recipe-steps-table condensed" aria-label="Recipe Details" tabindex="0">
                 <tr style="background-color: #8B2635;">
-                    <th scope="col">Recipe<br><br>
-                        <h6>Click on a recipe name to expand and view details</h6>
+                    <th scope="col" aria-label="Recipe Column" tabindex="0">Recipe
+                        <h6 tabindex="0">Click on a recipe name to expand and view details</h6>
                     </th>
-                    <th scope="col">Ingredients</th>
-                    <th scope="col">Method</th>
+                    <th scope="col" aria-label="Ingredients Column" tabindex="0">Ingredients</th>
+                    <th scope="col" aria-label="Method Column" tabindex="0">Method
+                        <h6 tabindex="0">As you check off each step on a recipe, the recipe name will turn green to
+                            indicate a recipe being finished</h6>
+                    </th>
                 </tr>
 
 
@@ -152,7 +165,7 @@
                 <tr class="recipe-header" data-recipe="Lamprais-deets">
                     <td>
                         <button type="button" class="expand-btn recipe-btn active-recipe" aria-expanded="false"
-                            aria-controls="Lamprais details" aria-label="Toggle Lamprais recipe details"
+                            aria-controls="Lamprais-deets" aria-label="Toggle Lamprais recipe details"
                             onclick="setActiveRecipe('Lamprais')">Lamprais</button>
                     </td>
                     <td></td>
@@ -165,7 +178,7 @@
                 <tr class="recipe-details" id="Lamprais-deets" style="display:none;" aria-live="polite">
                     <td></td>
                     <td>
-                        <ul>
+                        <ul tabindex="0">
                             <li>Lamprais Rice</li>
                             <li>Chicken Curry</li>
                             <li>Seeni Sambol</li>
@@ -179,8 +192,8 @@
 
                     <!-- How to serve Lamprais after you've made all the ingredients-->
                     <td>
-                        <h3 id="serve-directions">Lamprais Serving Directions</h3>
-                        <ol class="step-list" data-header="Lamprais-deets">
+                        <h3 id="serve-directions" tabindex="0">Lamprais Serving Directions</h3>
+                        <ol class="step-list" data-header="Lamprais-deets" tabindex="0">
                             <li>
                                 <input type="checkbox" class="step-checkbox" id="lamprais-step-1">
                                 <label for="lamprais-step-1" aria-label="Mark step 1 as complete.">Cook the
@@ -188,7 +201,7 @@
                             </li>
                             <li>
                                 <input type="checkbox" class="step-checkbox" id="lamprais-step-2">
-                                <label for="lamprais-step-2" aria-label="Mark step 2 as complete"> Prepare the chicken
+                                <label for="lamprais-step-2" aria-label="Mark step 2 as complete."> Prepare the chicken
                                     curry.</label>
                             </li>
                             <li>
@@ -299,17 +312,17 @@
                                     cook for 3 - 5 minutes and then let it cool.</label>
                             </li>
 
-                            <li><input type="checkbox" class="step-checkbox" id="cutlets-step-6">
+                            <li><input type="checkbox" class="step-checkbox" id="cutlets-step-6.">
                                 <label for="cutlets-step-6" aria-label="Mark step 6 as complete.">After the mixture has
                                     cooled, shape it into balls.</label>
                             </li>
 
-                            <li><input type="checkbox" class="step-checkbox" id="cutlets-step-7">
+                            <li><input type="checkbox" class="step-checkbox" id="cutlets-step-7.">
                                 <label for="cutlets-step-7" aria-label="Mark step 7 as complete.">Crack a egg into a
                                     different bowl and whisk it for 1 minute, in another bowl add breadcrumbs.</label>
                             </li>
 
-                            <li><input type="checkbox" class="step-checkbox" id="cutlets-step-8">
+                            <li><input type="checkbox" class="step-checkbox" id="cutlets-step-8.">
                                 <label for="cutlets-step-8" aria-label="Mark step 8 as complete.">After you have
                                     prepared your workstation, get your potato balls, use one hand to dip them into the
                                     egg mixture and using the other dip in the breadcrumbs.</label>
@@ -336,7 +349,7 @@
                 <tr class="recipe-header" data-recipe="chicken-curry">
                     <td>
                         <button type="button" class="expand-btn recipe-btn" aria-expanded="false"
-                            aria-controls="chicken curry" aria-label="Toggle chicken curry recipe details"
+                            aria-controls="chicken-curry" aria-label="Toggle chicken curry recipe details"
                             onclick="setActiveRecipe('Chicken Curry')">Chicken
                             Curry</button>
                     </td>
@@ -406,7 +419,7 @@
                 <tr class="recipe-header" data-recipe="seeni-sambol">
                     <td>
                         <button type="button" class="expand-btn recipe-btn" aria-expanded="false"
-                            aria-controls="seeni sambol" aria-label="Toggle seeni sambol recipe details"
+                            aria-controls="seeni-sambol" aria-label="Toggle seeni sambol recipe details"
                             onclick="setActiveRecipe('Seeni Sambol')">Seeni
                             Sambol</button>
                     </td>
@@ -462,7 +475,7 @@
                 <tr class="recipe-header" data-recipe="Lamprais-rice">
                     <td>
                         <button type="button" class="expand-btn recipe-btn" aria-expanded="false"
-                            aria-controls="Lamprais rice" aria-label="Toggle Lamprais rice recipe details"
+                            aria-controls="Lamprais-rice" aria-label="Toggle Lamprais rice recipe details"
                             onclick="setActiveRecipe('Lamprais Rice')">Lamprais
                             Rice</button>
                     </td>
@@ -534,8 +547,7 @@
                 <tr class="recipe-header" data-recipe="brinjal-moju">
                     <td>
                         <button type="button" class="expand-btn recipe-btn" aria-expanded="false"
-                            aria-controls="brinjal moju (sweet and sour eggplant pickle)"
-                            aria-label="Toggle brinjal moju recipe details"
+                            aria-controls="brinjal-moju" aria-label="Toggle brinjal moju recipe details"
                             onclick="setActiveRecipe('Brinjal Moju')">Brinjal Moju</button>
                     </td>
                     <td></td>
@@ -595,7 +607,7 @@
                 <tr class="recipe-header" data-recipe="ash-plantain-curry">
                     <td>
                         <button type="button" class="expand-btn recipe-btn" aria-expanded="false"
-                            aria-controls="ash plantain curry" aria-label="Toggle ash plantain recipe details"
+                            aria-controls="ash-plantain-curry" aria-label="Toggle ash plantain recipe details"
                             onclick="setActiveRecipe('Ash Plantain Curry')">Ash
                             Plantain Curry</button>
                     </td>
@@ -623,37 +635,49 @@
                         <ol class="step-list" data-header="ash-plantain-curry">
                             <li>
                                 <input type="checkbox" class="step-checkbox" id="ash-plantain-curry-step-1">
-                                <label for="ash-plantain-curry-step-1" aria-label="Mark step 1 as complete.">In a food
-                                    processor add the dried shrimp, red onion, red chilli and a pinch of salt and grind
-                                    them up.
+                                <label for="ash-plantain-curry-step-1" aria-label="Mark step 1 as complete.">Cut the ash
+                                    plantains into small cubes, sprinkle with salt and turmeric then rub it in
+                                    well.</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" class="step-checkbox" id="ash-plantain-curry-step-2">
-                                <label for="ash-plantain-curry-step-2" aria-label="Mark step 2 as complete.">In a food
-                                    processor add the dried shrimp, red onion, red chilli and a pinch of salt and grind
-                                    them up.
+                                <label for="ash-plantain-curry-step-2" aria-label="Mark step 2 as complete.">Fill a deep
+                                    bottom frying pan with oil and deep fry the ash plantain until they become golden
+                                    brown in colour, after about 2 minutes, turn over the ash plantain and cook for an
+                                    additional 2 minutes so that they are evenly fried.<br><br>Drain the oil on
+                                    paper towel.</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" class="step-checkbox" id="ash-plantain-curry-step-3">
-                                <label for="ash-plantain-curry-step-3" aria-label="Mark step 3 as complete.">In a food
-                                    processor add the dried shrimp, red onion, red chilli and a pinch of salt and grind
-                                    them up.
+                                <label for="ash-plantain-curry-step-3" aria-label="Mark step 3 as complete.">In a new
+                                    frying pan, heat 3 tbsp of oil because we are going to fry our aromatics. Add the
+                                    remaining ingredients, excluding the ash plantain, water and coconut cream, cook for
+                                    3 - 4 minutes or
+                                    until the onion has turned slightly brown and the spices become
+                                    fragrant.</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" class="step-checkbox" id="ash-plantain-curry-step-4">
-                                <label for="ash-plantain-curry-step-4" aria-label="Mark step 4 as complete.">In a food
-                                    processor add the dried shrimp, red onion, red chilli and a pinch of salt and grind
-                                    them up.
+                                <label for="ash-plantain-curry-step-4" aria-label="Mark step 4 as complete.">After you
+                                    have cooked the spices, add in your coconut cream and reduce the stovetop element to
+                                    low heat, bring the gravy to a rolling boil.</label>
                             </li>
 
                             <li>
                                 <input type="checkbox" class="step-checkbox" id="ash-plantain-curry-step-5">
-                                <label for="ash-plantain-curry-step-5" aria-label="Mark step 5 as complete.">In a food
-                                    processor add the dried shrimp, red onion, red chilli and a pinch of salt and grind
-                                    them up.
+                                <label for="ash-plantain-curry-step-5" aria-label="Mark step 5 as complete.">After the
+                                    gravy has reached a rolling boil, add in your fried ash plantains you prepared
+                                    earlier. Increase the stovetop element to medium heat, add salt and adjust to taste.
+                                    You know that the curry after you simmer the gravy until it has reduced.</label>
+                            </li>
+
+                            <li> <input type="checkbox" class="step-checkbox" id="ash-plantain-curry-step-6">
+                                <label for="ash-plantain-curry-step-6" aria-label="Mark step 6 as complete.">Don't worry
+                                    if the curry is dry, that's the result we are looking for. Store the curry in the
+                                    freeze in an airtight container until you are ready to make the Lamprais.</label>
                             </li>
                         </ol>
                     </td>
@@ -681,101 +705,104 @@
                             <li>lime to taste</li>
                             <li>1 cup grated coconut</li>
                         </ul>
-                    </td>
-                    <td>
-                        <ol class="step-list" data-header="blachan">
-                            <li>
-                                <input type="checkbox" class="step-checkbox" id="blachan-step-1">
-                                <label for="blachan-step-1" aria-label="Mark step 1 as complete.">In a food
-                                    processor add the dried shrimp, red onion, red chilli and a pinch of salt and grind
-                                    them up.
-                            </li>
-
-                            <li>
-                                <input type="checkbox" class="step-checkbox" id="blachan-step-2">
-                                <label for="blachan-step-2" aria-label="Mark step 2 as complete.">After everything
-                                    has been ground up, squeeze lime juice into the mixture until moist and your desired
-                                    level of acidity has been reached.
-                            </li>
-
-                            <li>
-                                <input type="checkbox" class="step-checkbox" id="blachan-step-3">
-                                <label for="blachan-step-3" aria-label="Mark step 3 as complete.">Check for salt,
-                                    if the blachan is not salty enough, add more.
-                            </li>
-                        </ol>
-                    </td>
-                </tr>
-            </table>
-        </div> <!-- End of Lamprais recipe-->
-
-
-
-
-
-
-        <!-- Kottu Recipe -->
-
-
-        <div class="recipe-section-table_1" role="main" aria-label="Main Content">
-            <table>
-            </table>
         </div>
-        <div id="kottu" class="recipe-section" aria-labelledby="kottu-heading">
-            <h1>02. Kottu</h1>
-            <h2 class="recipe-aligned-content">Kottu: When Leftovers Become a Symphony of Flavour</h2>
-            <p class="recipe-aligned-content">Kottu originated in the Tamil regions of Sri Lanka in the 1970s, likely in
-                Trincomalee or
-                Batticaloa. Throughout Sri Lanka, the distinctive sound of bench scrapers chopping
-                and mixing roti with vegetables on metal cooktops is like music to the ears as a feast is about to
-                arrive.</p><br>
-            <p class="recipe-aligned-content">As a Sri Lankan, I can attest that this flavourful, inexpensive dish is
-                arguably one of Sri Lanka's hidden treasures, one I find myself often craving. The humble origins of
-                this dish highlight how ingenuity leads to
-                delicious results. Kottu is a testament to how simple ingredients, when combined with creativity and
-                skill, can
-                create a meal that is both satisfying and full of character. It’s a dish that brings people together,
-                whether
-                enjoyed at a bustling street stall or made at home with family and friends.</p><br>
+        </td>
+        <td>
+            <ol class="step-list" data-header="blachan">
+                <li>
+                    <input type="checkbox" class="step-checkbox" id="blachan-step-1">
+                    <label for="blachan-step-1" aria-label="Mark step 1 as complete.">In a food
+                        processor add the dried shrimp, red onion, red chilli and a pinch of salt and grind
+                        them up.</label>
+                </li>
 
-            <img id="kottu" src="./images/kottu.jpg" class="recipe-aligned-content"
-                alt="Sri Lankan street food: Cheese kottu">
+                <li>
+                    <input type="checkbox" class="step-checkbox" id="blachan-step-2">
+                    <label for="blachan-step-2" aria-label="Mark step 2 as complete.">After everything
+                        has been ground up, squeeze lime juice into the mixture until moist and your desired
+                        level of acidity has been reached.</label>
+                </li>
 
-            <!-- A video of a easy cheese kottu you can make at home -->
-            <div class="video-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEBPoZ1dmVQ?si=5T5K-588e2rqFP2i"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen muted></iframe>
-            </div>
-            <!-- Ending of recipe video -->
-            </p>
+                <li>
+                    <input type="checkbox" class="step-checkbox" id="blachan-step-3">
+                    <label for="blachan-step-3" aria-label="Mark step 3 as complete.">Check for salt,
+                        if the blachan is not salty enough, add more.</label>
 
-
-            <table class="recipe-summary-table condensed" aria-label="Recipe Summary">
-                <tr>
-                    <th scope="col">Category</th>
-                    <th scope="col">Servings</th>
-                    <th scope="col">Prep Time</th>
-                    <th scope="col">Cook Time</th>
-                </tr>
-                <tr>
-                    <td>Street Food</td>
-                    <td>2 - 3</td>
-                    <td>10 - 15 minutes</td>
-                    <td>5 - 10 minutes</td>
-                </tr>
-            </table>
+                </li>
+            </ol>
+        </td>
+        </tr>
+        </table>
+    </div> <!-- End of Lamprais recipe-->
 
 
-            <table class="recipe-steps-table condensed" aria-label="Recipe Details">
-                <tr>
-                    <th scope="col">Ingredients</th>
-                    <th scope="col">Method</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
+
+    <!-- Kottu Recipe -->
+
+
+    <div class="recipe-section-table_1" role="main" aria-label="Main Content">
+        <table>
+        </table>
+    </div>
+    <div id="kottu" class="recipe-section" aria-labelledby="kottu-heading">
+        <h1 tabindex="0">02. Kottu</h1>
+        <h2 class="recipe-aligned-content" tabindex="0">Kottu: When Leftovers Become a Symphony of Flavour</h2>
+        <p class="recipe-aligned-content" tabindex="0">Kottu originated in the Tamil regions of Sri Lanka in the
+            1970s, likely in
+            Trincomalee or
+            Batticaloa. Throughout Sri Lanka, the distinctive sound of bench scrapers chopping
+            and mixing roti with vegetables on metal cooktops is like music to the ears as a feast is about to
+            arrive.</p><br>
+        <p class="recipe-aligned-content" tabindex="0">As a Sri Lankan, I can attest that this flavourful,
+            inexpensive dish is
+            arguably one of Sri Lanka's hidden treasures, one I find myself often craving. The humble origins of
+            this dish highlight how ingenuity leads to
+            delicious results. Kottu is a testament to how simple ingredients, when combined with creativity and
+            skill, can
+            create a meal that is both satisfying and full of character. It’s a dish that brings people together,
+            whether
+            enjoyed at a bustling street stall or made at home with family and friends.</p><br>
+
+        <img id="kottu-img" src="./images/kottu.jpg"
+            alt="Standard version of Sri Lankan Kottu: A stir-fry made with roti" class="recipe-aligned-content"
+            tabindex="0">
+
+        <!-- A video of a easy cheese kottu you can make at home -->
+        <div class="video-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEBPoZ1dmVQ?si=5T5K-588e2rqFP2i"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" tabindex="0" allowfullscreen></iframe>
+        </div>
+        <!-- Ending of recipe video -->
+        </p>
+
+
+        <table class="recipe-summary-table condensed" aria-label="Recipe Summary for Kottu" tabindex="0">
+            <tr>
+                <th scope="col" aria-label="Category: Street Food." tabindex="0">Category</th>
+                <th scope="col" aria-label="Serves 3 - 4 people." tabindex="0">Servings</th>
+                <th scope="col" aria-label="Prep Time: 10 - 15 minutes." tabindex="0">Prep Time</th>
+                <th scope="col" aria-label="Cook Time: 5 - 10 minutes." tabindex="0">Cook Time</th>
+            </tr>
+            <tr>
+                <td>Street Food</td>
+                <td>2 - 3</td>
+                <td>10 - 15 minutes</td>
+                <td>5 - 10 minutes</td>
+            </tr>
+        </table>
+
+
+        <table class="recipe-steps-table condensed" aria-label="Recipe Details" tabindex="0">
+            <tr>
+                <th scope="col" tabindex="0">Ingredients</th>
+                <th scope="col" tabindex="0">Method</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ingredients">
+                        <ul id="kottuIngredients" tabindex="0">
                             <li>Oil</li>
                             <li>Garlic</li>
                             <li>Ginger</li>
@@ -788,252 +815,274 @@
                             <li>Soy sauce to taste</li>
                             <li>Salt and pepper to taste</li>
                         </ul>
-                    </td>
-                    <td>
-                        <ol id="kottuinstruct">
-                            <li>Chop the Godamba roti into small pieces.</li>
-                            <li>In a large pan, heat some oil and sauté the onions and green chillies until
-                                fragrant.
-                            </li>
-                            <li>Add the mixed vegetables and cook until tender.</li>
-                            <li>Add the chopped roti and stir-fry for a few minutes.</li>
-                            <li>If using eggs, push the mixture to one side of the pan, crack the eggs on the other
-                                side,
-                                scramble them, and then mix everything together.</li>
-                            <li>Add soy sauce, salt, and pepper to taste. Serve hot!</li>
+                </td>
+                <td>
 
-                        </ol>
-                    </td>
-                </tr>
-            </table>
-            <hr>
-        </div>
+                    <!-- Ordered list for kottu recipe -->
+                    <ol class="method-list" id="kottu-method" tabindex="0">
+                        <li>Chop the Godamba roti into small pieces.</li>
+                        <li>In a large pan, heat some oil and sauté the onions and green chillies until
+                            fragrant.
+                        </li>
+                        <li>Add the mixed vegetables and cook until tender.</li>
+                        <li>Add the chopped roti and stir-fry for a few minutes.</li>
+                        <li>If using eggs, push the mixture to one side of the pan, crack the eggs on the other
+                            side,
+                            scramble them, and then mix everything together.</li>
+                        <li>Add soy sauce, salt, and pepper to taste. Serve hot!</li>
+                    </ol>
+                    <!-- Ordered List for kottu ends -->
+                </td>
+            </tr>
+        </table>
+        <hr>
+    </div>
 
-        <!-- Kottu Recipe Ends -->
-
-
-
-
-        <!-- Egg Hoppers Recipe -->
-
-        <div id="hoppers" class="recipe-section" aria-labelledby="egg-hoppers-heading">
-            <h1>03. Egg Hoppers</h1>
-            <h2 class="recipe-aligned-content">Egg Hoppers: The Perfect Morning Bowl That's Worth the Wait</h2>
-            <p class="recipe-aligned-content">Egg hoppers, known locally as "biththara appa," represent the pinnacle of
-                Sri Lankan breakfast cuisine. These bowl-shaped crepes with their signature crispy edges and soft,
-                spongy centers have been gracing Sri Lankan tables for centuries. The exact origins of where this dish
-                came from is unknown but likely evolving from South Indian influence during ancient trade connections.
-                What makes hoppers truly special isn't just their unique shape created by the specialized hopper pan
-                (appachatti), but for the patient fermentation process
-                that transforms simple rice flour and coconut milk into something magical.</p><br>
-
-            <p class="recipe-aligned-content">The secret to authentic hoppers lies in the overnight fermentation of the
-                batter, where natural yeasts work their magic to create that distinctive tangy flavour
-                and airy texture. This fermentation process, combined with the swirling technique in the curved pan,
-                produces hoppers with lace-like crispy edges that shatter at first bite, while the center remains
-                tender enough to crade a perfectly cooked yet runny egg. For Sri Lankans, hoppers aren't just breakfast
-                - they're a weekend ritual, a comfort food that brings families together around the kitchen
-                as the batter sizzles and the aroma fills the home. The interplay of textures and that subtle sour note
-                from fermentation makes each hopper a small masterpiece that transforms the simple act of
-                breakfast into something truly special.</p><br>
-            <img id="Egg_Hop" src="./images/Eggy_Hoppers.jpg"
-                alt="Sri Lankan egg hopper served with red chilli sambol and two curry accompaniments on a dark blue plate, garnished with green leaves"
-                class="recipe-aligned-content">
-            <table class="recipe-summary-table condensed" aria-label="Recipe Summary">
-                <tr>
-                    <th scope="col">Category</th>
-                    <th scope="col">Servings</th>
-                    <th scope="col">Prep Time</th>
-                    <th scope="col">Cook Time</th>
-                </tr>
-                <tr>
-                    <td>Breakfast</td>
-                    <td>5 - 6</td>
-                    <td>3 - 4 hours</td>
-                    <td>2 - 5 Minutes</td>
-                </tr>
-            </table>
-
-            <!-- Ingredients & Method Table -->
-            <table class="recipe-steps-table condensed" aria-label="Recipe Details">
-                <tr>
-                    <th scope="col">Ingredients</th>
-                    <th scope="col">Method</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="ingredients">
-                            <ul id="hopperIngredients">
-                                <li>1 teaspoon dried yeast</li>
-                                <li>2 teaspoons sugar</li>
-                                <li>1/2 cup lukewarm water</li>
-                                <li>Water from the coconut or plain water</li>
-                                <li>Approx. 2 1/2 cups thick coconut milk</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td>
-                        <ol class="hopper-method">
-                            <li>Mix yeast and sugar in lukewarm water and leave aside 5 minutes or until it starts
-                                to
-                                froth. Put the rice flour into a large bowl. Make a well and add the yeast mixture
-                                and sufficient
-                                cold water or coconut water to make a soft dough. Cover and leave aside 3 - 4 hours
-                                to rise.</li>
-                            <li>When the dough doubles in size and 3 hours before required, add the thick coconut
-                                milk to make a
-                                thick
-                                yet pourable batter. Add salt to taste and leave aside. After 3 hours the batter is
-                                ready to use. It may be necessary to add a little more milk to get the correct
-                                consistency </li>
-                            <li>To make hoppers, wipe the pan with a piece of cloth dipped in oil. When the pan is
-                                hot
-                                pour
-                                a
-                                ladle of the batter. Swirl the pan around so that the batter covers the sides, be
-                                careful
-                                not to
-                                spill the batter. Cover and cook on a low
-                                heat until the top edge begins to turn golden. Remove hopper with a metal spatula.
-                                Wipe
-                                pan
-                                again with the oiled cloth and repeat. To get the correct bowl shape it will get a
-                                bit of skill, however, with a litte practice you will reach
-                                perfection </li>
-                            <li>For egg hoppers, pour a ladle of batter into the pan. Then break an egg into the
-                                centre.
-                                Cover
-                                and cook on a very low heat until the egg is just done.</li>
-                            <li>Serve immediately with your choice of sambols, curries or chutneys for a traditional
-                                Sri
-                                Lankan
-                                breakfast experience.</li>
-                        </ol>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-
-        <!-- Summary Table -->
-        <!-- Egg Hoppers Recipe Ends -->
-
-
-        <!-- Start of footer-->
-
-        <footer role="contentinfo" aria-label="Page Footer" style="color: white; text-align: center;">
-            Shamal Madawala Liyana Hettiarachchige<br>
-            Assessment 3 Due Date: 29th May 2025
-        </footer>
-
-        <!-- End of footer -->
+    <!-- Kottu Recipe Ends -->
 
 
 
 
+    <!-- Egg Hoppers Recipe -->
 
-        <!-- All of my JavaScript stuff -->
-        <script>
-            document.querySelectorAll('.sidebar a.nav-link').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const target = document.getElementById(targetId);
-                    if (target) {
-                        // Change this value to match your banner height!
-                        const yOffset = -55; // e.g., -300px offset for a tall banner/header
-                        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                        window.scrollTo({ top: y, behavior: 'smooth' });
-                    }
-                });
-            });
+    <div id="hoppers" class="recipe-section" aria-labelledby="egg-hoppers-heading">
+        <h1 tabindex="0">03. Egg Hoppers</h1>
+        <h2 class="recipe-aligned-content" tabindex="0">Egg Hoppers: The Perfect Morning Bowl That's Worth the Wait
+        </h2>
+        <p class="recipe-aligned-content" tabindex="0">Egg hoppers, known locally as "biththara appa," represent the
+            pinnacle of
+            Sri Lankan breakfast cuisine. These bowl-shaped crepes with their signature crispy edges and soft,
+            spongy centers have been gracing Sri Lankan tables for centuries. The exact origins of where this dish
+            came from is unknown but likely evolving from South Indian influence during ancient trade connections.
+            What makes hoppers truly special isn't just their unique shape created by the specialized hopper pan
+            (appachatti), but for the patient fermentation process
+            that transforms simple rice flour and coconut milk into something magical.</p><br>
 
-            window.addEventListener('scroll', function () {
-                const sidebar = document.querySelector('.sidebar');
-                if (window.scrollY > 750) { // change 300 to the number of pixels you want
-                    sidebar.classList.add('visible');
-                } else {
-                    sidebar.classList.remove('visible');
+        <p class="recipe-aligned-content" tabindex="0">The secret to authentic hoppers lies in the overnight
+            fermentation of the
+            batter, where natural yeasts work their magic to create that distinctive tangy flavour
+            and airy texture. This fermentation process, combined with the swirling technique in the curved pan,
+            produces hoppers with lace-like crispy edges that shatter at first bite, while the center remains
+            tender enough to cradle a perfectly cooked yet runny egg. For Sri Lankans, hoppers aren't just breakfast
+            - they're a weekend ritual, a comfort food that brings families together around the kitchen
+            as the batter sizzles and the aroma fills the home. The interplay of textures and that subtle sour note
+            from fermentation makes each hopper a small masterpiece that transforms the simple act of
+            breakfast into something truly special.</p><br>
+        <img id="Egg_Hop" src="./images/Eggy_Hoppers.jpg"
+            alt="Sri Lankan egg hopper served with red chilli sambol and two curry accompaniments on a dark blue plate, garnished with green leaves"
+            class="recipe-aligned-content" tabindex="0">
+        <table class="recipe-summary-table condensed" aria-label="Recipe Summary for Egg Hoppers" tabindex="0">
+            <tr>
+                <th scope="col" aria-label="Category: Breakfast." tabindex="0">Category</th>
+                <th scope="col" aria-label="Serves 5 - 6 people." tabindex="0">Servings</th>
+                <th scope="col"
+                    aria-label="Prep Time: 3 - 4 hours for a quick version, or overnight if creating the fermented batter."
+                    tabindex="0">
+                    Prep Time</th>
+                <th scope="col" tabindex="0">Cook Time</th>
+            </tr>
+            <tr>
+                <td>Breakfast</td>
+                <td>5 - 6</td>
+                <td>3 - 4 hours</td>
+                <td>2 - 5 Minutes</td>
+            </tr>
+        </table>
+
+        <!-- Ingredients & Method Table -->
+        <table class="recipe-steps-table condensed" aria-label="Recipe Details" tabindex="0">
+            <tr>
+                <th scope="col" tabindex="0">Ingredients</th>
+                <th scope="col" tabindex="0">Method</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ingredients">
+                        <ul id="hopperIngredients" tabindex="0">
+                            <li>1 teaspoon dried yeast</li>
+                            <li>2 teaspoons sugar</li>
+                            <li>1/2 cup lukewarm water</li>
+                            <li>Water from the coconut or plain water</li>
+                            <li>Approx. 2 1/2 cups thick coconut milk</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <ol class="method-list" id="hoppers-method" tabindex="0">
+                        <li>Mix yeast and sugar in lukewarm water and leave aside 5 minutes or until it starts
+                            to
+                            froth. Put the rice flour into a large bowl. Make a well and add the yeast mixture
+                            and sufficient
+                            cold water or coconut water to make a soft dough. Cover and leave aside 3 - 4 hours
+                            to rise.</li>
+                        <li>When the dough doubles in size and 3 hours before required, add the thick coconut
+                            milk to make a
+                            thick
+                            yet pourable batter. Add salt to taste and leave aside. After 3 hours the batter is
+                            ready to use. It may be necessary to add a little more milk to get the correct
+                            consistency </li>
+                        <li>To make hoppers, wipe the pan with a piece of cloth dipped in oil. When the pan is
+                            hot
+                            pour
+                            a
+                            ladle of the batter. Swirl the pan around so that the batter covers the sides, be
+                            careful
+                            not to
+                            spill the batter. Cover and cook on a low
+                            heat until the top edge begins to turn golden. Remove hopper with a metal spatula.
+                            Wipe
+                            pan
+                            again with the oiled cloth and repeat. To get the correct bowl shape it will get a
+                            bit of skill, however, with a litte practice you will reach
+                            perfection </li>
+                        <li>For egg hoppers, pour a ladle of batter into the pan. Then break an egg into the
+                            centre.
+                            Cover
+                            and cook on a very low heat until the egg is just done.</li>
+                        <li>Serve immediately with your choice of sambols, curries or chutneys for a traditional
+                            Sri
+                            Lankan
+                            breakfast experience.</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- Summary Table -->
+    <!-- Egg Hoppers Recipe Ends -->
+
+
+    <!-- The footer begins here -->
+
+
+    <footer aria-label="Page Footer" style="color: white; text-align: center;">
+        <!-- Name: --> Shamal Madawala Liyana Hettiarachchige<br>
+        <!-- Due Date: --> Assessment 3 Due Date: 15th June 2025
+    </footer>
+
+
+    <!-- End of footer -->
+
+
+
+
+
+    <!-- All of my JavaScript stuff -->
+    <script>
+        document.querySelectorAll('.sidebar a.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    // Change this value to match your banner height!
+                    const yOffset = -55; // e.g., -300px offset for a tall banner/header
+                    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
                 }
             });
+        });
 
-            // Hide sidebar after idle time (e.g., 5 seconds)
-            let idleTimeout;
-            const idleTime = 3000; // 3000ms = 3 seconds
+        window.addEventListener('scroll', function () {
             const sidebar = document.querySelector('.sidebar');
-
-            function resetIdleTimer() {
-                if (window.scrollY > 750) {
-                    sidebar.classList.add('visible');
-                }
-                clearTimeout(idleTimeout);
-                idleTimeout = setTimeout(() => {
-                    sidebar.classList.remove('visible');
-                }, idleTime);
+            if (window.scrollY > 750) { // change 300 to the number of pixels you want
+                sidebar.classList.add('visible');
+            } else {
+                sidebar.classList.remove('visible');
             }
+        });
 
-            // Listen for user activity
-            ['mousemove', 'keydown', 'scroll', 'touchstart'].forEach(evt => {
-                window.addEventListener(evt, resetIdleTimer, false);
+        // Hide sidebar after idle time (e.g., 5 seconds)
+        let idleTimeout;
+        const idleTime = 3000; // 3000ms = 3 seconds
+        const sidebar = document.querySelector('.sidebar');
+
+        function resetIdleTimer() {
+            if (window.scrollY > 750) {
+                sidebar.classList.add('visible');
+            }
+            clearTimeout(idleTimeout);
+            idleTimeout = setTimeout(() => {
+                sidebar.classList.remove('visible');
+            }, idleTime);
+        }
+
+        // Listen for user activity
+        ['mousemove', 'keydown', 'scroll', 'touchstart'].forEach(evt => {
+            window.addEventListener(evt, resetIdleTimer, false);
+        });
+
+        // Start timer on page load if sidebar is visible
+        window.addEventListener('load', resetIdleTimer);
+
+        document.querySelectorAll('.expand-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const recipeId = this.parentElement.parentElement.getAttribute('data-recipe');
+                const detailsRow = document.getElementById(recipeId);
+                const isOpen = detailsRow.style.display === '';
+
+                // Collapse all
+                document.querySelectorAll('.recipe-details').forEach(row => row.style.display = 'none');
+                document.querySelectorAll('.expand-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+                // Toggle current
+                if (!isOpen) {
+                    detailsRow.style.display = '';
+                    this.setAttribute('aria-expanded', 'true');
+                }
             });
+        });
 
-            // Start timer on page load if sidebar is visible
-            window.addEventListener('load', resetIdleTimer);
+        document.querySelectorAll('.step-list').forEach(list => {
+            list.addEventListener('change', function () {
+                const checkboxes = this.querySelectorAll('.step-checkbox');
+                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+                const headerKey = this.getAttribute('data-header');
+                const headerBtn = document.querySelector(`.recipe-header[data-recipe="${headerKey}"] .expand-btn`);
+                if (headerBtn) {
+                    if (allChecked) {
+                        headerBtn.style.backgroundColor = 'green';
+                        headerBtn.style.color = 'white';
+                    } else {
+                        headerBtn.style.backgroundColor = '';
+                        headerBtn.style.color = '';
+                    }
+                }
+            });
+        });
 
-            document.querySelectorAll('.expand-btn').forEach(btn => {
+        // Wait until the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll('.recipe-btn');
+            const statusIndicator = document.getElementById('status-indicator');
+
+            buttons.forEach(btn => {
                 btn.addEventListener('click', function () {
-                    const recipeId = this.parentElement.parentElement.getAttribute('data-recipe');
-                    const detailsRow = document.getElementById(recipeId);
-                    const isOpen = detailsRow.style.display === '';
-
-                    // Collapse all
-                    document.querySelectorAll('.recipe-details').forEach(row => row.style.display = 'none');
-                    document.querySelectorAll('.expand-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
-
-                    // Toggle current
-                    if (!isOpen) {
-                        detailsRow.style.display = '';
-                        this.setAttribute('aria-expanded', 'true');
-                    }
+                    // Remove active from all buttons
+                    buttons.forEach(b => b.classList.remove('active-recipe'));
+                    // Add active to the clicked button
+                    this.classList.add('active-recipe');
+                    // Update the status indicator
+                    statusIndicator.innerHTML =
+                        '<span class="status-dot"></span> Currently viewing: <strong>' + this.textContent.trim() + '</strong>';
                 });
             });
+        });
+    </script>
 
-            document.querySelectorAll('.step-list').forEach(list => {
-                list.addEventListener('change', function () {
-                    const checkboxes = this.querySelectorAll('.step-checkbox');
-                    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-                    const headerKey = this.getAttribute('data-header');
-                    const headerBtn = document.querySelector(`.recipe-header[data-recipe="${headerKey}"] .expand-btn`);
-                    if (headerBtn) {
-                        if (allChecked) {
-                            headerBtn.style.backgroundColor = 'green';
-                            headerBtn.style.color = 'white';
-                        } else {
-                            headerBtn.style.backgroundColor = '';
-                            headerBtn.style.color = '';
-                        }
-                    }
-                });
+    <script>
+        document.querySelectorAll('.step-checkbox').forEach(function (checkbox) {
+            checkbox.addEventListener('keydown', function (e) {
+                if (e.key === "Enter" || e.keyCode === 13) {
+                    e.preventDefault();
+                    checkbox.checked = !checkbox.checked;
+                    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                }
             });
-
-            // Wait until the DOM is fully loaded
-            document.addEventListener("DOMContentLoaded", function () {
-                const buttons = document.querySelectorAll('.recipe-btn');
-                const statusIndicator = document.getElementById('status-indicator');
-
-                buttons.forEach(btn => {
-                    btn.addEventListener('click', function () {
-                        // Remove active from all buttons
-                        buttons.forEach(b => b.classList.remove('active-recipe'));
-                        // Add active to the clicked button
-                        this.classList.add('active-recipe');
-                        // Update the status indicator
-                        statusIndicator.innerHTML =
-                            '<span class="status-dot"></span> Currently viewing: <strong>' + this.textContent.trim() + '</strong>';
-                    });
-                });
-            });
-        </script>
+        });
+    </script>
 </body>
 
 </html>
